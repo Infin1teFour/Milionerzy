@@ -2,6 +2,32 @@ import tkinter as tk
 from PIL import ImageTk, Image
 import mysql.connector
 
+import mysql.connector
+
+# Connect to the database
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="milionerzy"
+)
+
+# Create a cursor object
+cursor = conn.cursor()
+
+# Execute a SELECT statement
+cursor.execute('SELECT * FROM pytania')
+
+# Fetch the results
+results = cursor.fetchall()
+
+# Print the results
+for row in results:
+    print(row)
+
+# Close the cursor and connection
+cursor.close()
+conn.close()
 
 root = tk.Tk()
 root.title("Milionerzy")
