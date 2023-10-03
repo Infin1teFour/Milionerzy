@@ -20,20 +20,14 @@ Przegrana:
 Warunki wygranej:
   Aby wygrać milion, gracz musi odpowiedzieć poprawnie na wszystkie pytania dojście do ostatniego etapu i udzielić prawidłowej odpowiedzi na ostatnie pytanie.
 
+Zakończenie gry:
+  Gracz może zdecydować się zakończyć grę po każdym pytaniu i zatrzymać się z aktualnie zdobytą sumą pieniędzy.
+
 Pomocnicze opcje:
   Gracz może skorzystać z trzech rodzajów pomocy:
     "Pół na pół": Eliminacja dwóch nieprawidłowych odpowiedzi, pozostawiając jedną prawidłową i jedną losową z pozostałych.
     "Pytanie do publiczności": Grupa publiczności głosuje na swoją preferowaną odpowiedź, a wyniki są wyświetlane.
     "Telefon do przyjaciela": Gracz może zadzwonić do wybranej osoby i zadać jej pytanie, aby uzyskać pomoc w wyborze odpowiedzi.
-
-Telefon do przyjaciela:
-  Gracz może zadzwonić do wybranej osoby i zadać jej pytanie. Ta osoba ma 30 sekund na udzielenie odpowiedzi.
-
-Pytanie do publiczności:
-  Gracz może zadać pytanie publiczności, która głosuje na swoją preferowaną odpowiedź. Procentowy podział głosów jest wyświetlany.
-
-Pół na pół:
-  Gracz może wybrać opcję "Pół na pół", która eliminuje dwie nieprawidłowe odpowiedzi, pozostawiając tylko jedną prawidłową i jedną nieznaną odpowiedź.
 
 Odpowiedzi na pytania:
   Gracz musi wybrać jedną odpowiedź spośród czterech możliwych. Po wyborze danej odpowiedzi nie ma możliwości zmiany odpowiedzi.
