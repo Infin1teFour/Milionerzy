@@ -1,11 +1,14 @@
 import tkinter as tk
 from PIL import ImageTk, Image
+import mysql.connector
+
 
 root = tk.Tk()
 root.title("Milionerzy")
 root.resizable(0, 0)
 root.configure(background="blue")
 
+telefon = ImageTk.PhotoImage(Image.open("grafika\ktelefon.png"))
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -37,7 +40,7 @@ kola.grid(row=0, column=3, columnspan=2)
 kolo_pol_na_pol = tk.Button(kola, text="50na50", width=10, height=2)
 kolo_pol_na_pol.grid(row=0, column=0)
 
-kolo_telefon = tk.Button(kola, text="Telefon", width=10, height=2)
+kolo_telefon = tk.Button(kola, image=telefon, borderwidth=0)
 kolo_telefon.grid(row=0, column=1)
 
 kolo_publicznosc = tk.Button(kola, text="Publiczność", width=10, height=2)
