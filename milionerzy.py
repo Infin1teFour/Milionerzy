@@ -25,10 +25,6 @@ results = cursor.fetchall()
 for row in results:
     print(row)
 
-# Close the cursor and connection
-cursor.close()
-conn.close()
-
 root = tk.Tk()
 root.title("Milionerzy")
 root.resizable(0, 0)
