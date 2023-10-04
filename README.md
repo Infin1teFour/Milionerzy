@@ -19,7 +19,7 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   Gracz ma ograniczony czas na udzielenie odpowiedzi (zwykle 30 sekund).
 
 # Wygrane pieniężne:
-  Po każdym poprawnym pytaniu gracz zdobywa określoną sumę pieniędzy.
+  Po każdym poprawnym pytaniu gracz zdobywa określoną sumę pieniędzy. <br>
   Wygrana suma rośnie wraz z poziomem trudności pytań. Ostateczna wygrana to zazwyczaj milion złotych lub inna ustalona wcześniej suma.
 
 # Przegrana:
@@ -32,9 +32,9 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   Gracz może zdecydować się zakończyć grę po każdym pytaniu i zatrzymać się z aktualnie zdobytą sumą pieniędzy.
 
 # Pomocnicze opcje:
-  Gracz może skorzystać z trzech rodzajów pomocy:
-    "Pół na pół": Eliminacja dwóch nieprawidłowych odpowiedzi, pozostawiając jedną prawidłową i jedną losową z pozostałych.
-    "Pytanie do publiczności": Grupa publiczności głosuje na swoją preferowaną odpowiedź, a wyniki są wyświetlane.
+  Gracz może skorzystać z trzech rodzajów pomocy: <br>
+    "Pół na pół": Eliminacja dwóch nieprawidłowych odpowiedzi, pozostawiając jedną prawidłową i jedną losową z pozostałych.<br>
+    "Pytanie do publiczności": Grupa publiczności głosuje na swoją preferowaną odpowiedź, a wyniki są wyświetlane.<br>
     "Telefon do przyjaciela": Gracz może zadzwonić do wybranej osoby i zadać jej pytanie, aby uzyskać pomoc w wyborze odpowiedzi.
 
 # Odpowiedzi na pytania:
