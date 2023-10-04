@@ -47,9 +47,9 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   Gracz może zakończyć grę w dowolnym momencie i zatrzymać się z aktualnie zdobytą sumą pieniędzy.
 
 # Informacje dodatkowe:
-  Program napisany przy pomocy bibloioteki tkinter'a
-  Program: Jan Jakowicki
-  Baza danych: Anastasiia Bondarenko
-  Grafika: Jakub Dratwa
-  Pomoc techniczna: Bastian Wiciński
+  Program napisany przy pomocy bibloioteki tkinter'a <br>
+  Program: Jan Jakowicki <br>
+  Baza danych: Anastasiia Bondarenko <br>
+  Grafika: Jakub Dratwa <br>
+  Pomoc techniczna: Bastian Wiciński <br>
   Dokumentacja: Gerard Gondek, Bastian Wiciński
