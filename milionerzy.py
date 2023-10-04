@@ -134,7 +134,7 @@ przycisk_d.grid(row=2, column=1)
 kola = tk.Canvas(root, width=800, height=600, bg="blue")
 kola.grid(row=0, column=3, columnspan=2)
 
-kolo_pol_na_pol = tk.Button(kola, text="50na50", width=10, height=2)
+kolo_pol_na_pol = tk.Button(kola, image=polnapol_img, width=10, height=2)
 kolo_pol_na_pol.grid(row=0, column=0)
 
 kolo_telefon = tk.Button(kola, text="Telefon do przyjaciela",width=18, height=2)
