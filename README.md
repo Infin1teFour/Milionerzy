@@ -1,4 +1,4 @@
-# opsi wyglądu
+# Opis wyglądu
 Na środku ekranu będzie wyświetlone pytanie i pod nim 4 odpowiedzi, tylko jedno jest poprawne.
 Po prawej stronie ekranu będzie suma możliwych pieniędzy do wygrania za dane pytanie.
 Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
