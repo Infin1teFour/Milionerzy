@@ -1,8 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 import mysql.connector
-
-import mysql.connector
+import random as r
 
 # Connect to the database
 conn = mysql.connector.connect(
@@ -20,10 +19,8 @@ cursor.execute('SELECT * FROM pytania')
 
 # Fetch the results
 results = cursor.fetchall()
+results = r.sample(results, 12)
 
-# Print the results
-for row in results:
-    print(row)
 
 root = tk.Tk()
 root.title("Milionerzy")
@@ -32,27 +29,92 @@ root.configure(background="blue")
 
 telefon = ImageTk.PhotoImage(Image.open("grafika\ktelefon.png"))
 
+nr_pytania = 0
+poprawna = ""
+A = ""
+B = ""
+C = ""
+D = ""
+def pytania():
+    global results, nr_pytania, poprawna, A, B, C, D
+    if nr_pytania <= 11:   
+        pytanie_tekst.config(text="Pytanie nr."+str(nr_pytania+1)+"\n"+results[nr_pytania][1])
+        A = results[nr_pytania][2].strip()
+        B = results[nr_pytania][3].strip()
+        C = results[nr_pytania][4].strip()
+        D = results[nr_pytania][5].strip()
+        poprawna = results[nr_pytania][6].strip()
+        przycisk_a.config(text=A)
+        przycisk_b.config(text=B)
+        przycisk_c.config(text=C)
+        przycisk_d.config(text=D)
+        print(poprawna)
+        print(A)
+        print(B)
+        print(C)
+        print(D)
+        print("\n")   
+        nr_pytania += 1
+    else:
+        
+
+def sprA():
+    global poprawna, A
+    if poprawna == A:
+        print("Dobrze")
+        pytania()
+    else:
+        print("Źle")
+        root.destroy()
+
+def sprB():
+    global poprawna, B
+    if poprawna == B:
+        print("Dobrze")
+        pytania()
+    else:
+        print("Źle")
+        root.destroy()
+
+def sprC():
+    global poprawna, C
+    if poprawna == C:
+        print("Dobrze")
+        pytania()
+    else:
+        print("Źle")
+        root.destroy()
+
+def sprD():
+    global poprawna, D
+    if poprawna == D:
+        print("Dobrze")
+        pytania()
+    else:
+        print("Źle")
+        root.destroy()
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
 pytanie.grid(row=0, column=0, columnspan=2)
 
-pytanie_tekst = tk.Label(pytanie, text="Pytanie", font=("Arial", 20), bg="lightblue")
+pytanie_tekst = tk.Label(pytanie, text="", font=("Arial", 20), bg="lightblue")
 pytanie_tekst.grid(row=0, column=0, columnspan=2)
+
 
 # Odpowiedzi
 przyciski = tk.Canvas(root, width=800, height=600, bg="blue")
 przyciski.grid(row=1, column=0, columnspan=3)
 
-przycisk_a = tk.Button(przyciski, text="A",width=40, height=5, bg="lightblue")
+przycisk_a = tk.Button(przyciski, text="",width=40, height=5, bg="lightblue", command=sprA)
 przycisk_a.grid(row=1, column=0)
 
-przycisk_b = tk.Button(przyciski, text="B", width=40, height=5, bg="lightblue")
+przycisk_b = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprB)
 przycisk_b.grid(row=1, column=1)
 
-przycisk_c = tk.Button(przyciski, text="C", width=40, height=5, bg="lightblue")
+przycisk_c = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprC)
 przycisk_c.grid(row=2, column=0)
 
-przycisk_d = tk.Button(przyciski, text="D", width=40, height=5, bg="lightblue")
+przycisk_d = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprD)
 przycisk_d.grid(row=2, column=1)
 
 # Koła ratunkowe
@@ -107,5 +169,8 @@ wygrane11.grid(row=10, column=0)
 
 wygrane12  = tk.Label(wygrane, text="500", font=("Arial", 20), bg="lightblue")
 wygrane12.grid(row=11, column=0)
+
+
+pytania()
 
 tk.mainloop()
