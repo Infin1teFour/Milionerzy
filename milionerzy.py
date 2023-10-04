@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 from PIL import ImageTk, Image
 import mysql.connector
 import random as r
@@ -27,14 +28,14 @@ root.title("Milionerzy")
 root.resizable(0, 0)
 root.configure(background="blue")
 
-telefon = ImageTk.PhotoImage(Image.open("grafika\ktelefon.png"))
-
 nr_pytania = 0
 poprawna = ""
 A = ""
 B = ""
 C = ""
 D = ""
+
+
 def pytania():
     global results, nr_pytania, poprawna, A, B, C, D
     if nr_pytania <= 11:   
@@ -53,10 +54,16 @@ def pytania():
         print(B)
         print(C)
         print(D)
-        print("\n")   
+        print("\n")
+        wygrane[nr_pytania].config(fg="yellow")
+        if nr_pytania > 0:
+            wygrane[nr_pytania-1].config(fg="black")
+
         nr_pytania += 1
     else:
-        
+        messagebox.showinfo("Koniec gry", "Wygrałeś 1 000 000")
+        root.destroy()
+
 
 def sprA():
     global poprawna, A
@@ -65,6 +72,7 @@ def sprA():
         pytania()
     else:
         print("Źle")
+        messagebox.showerror("Koniec gry", "Przegrałeś")
         root.destroy()
 
 def sprB():
@@ -74,6 +82,7 @@ def sprB():
         pytania()
     else:
         print("Źle")
+        messagebox.showerror("Koniec gry", "Przegrałeś")
         root.destroy()
 
 def sprC():
@@ -83,6 +92,7 @@ def sprC():
         pytania()
     else:
         print("Źle")
+        messagebox.showerror("Koniec gry", "Przegrałeś")
         root.destroy()
 
 def sprD():
@@ -92,7 +102,10 @@ def sprD():
         pytania()
     else:
         print("Źle")
+        messagebox.showerror("Koniec gry", "Przegrałeś")
         root.destroy()
+
+
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
 pytanie.grid(row=0, column=0, columnspan=2)
@@ -124,7 +137,7 @@ kola.grid(row=0, column=3, columnspan=2)
 kolo_pol_na_pol = tk.Button(kola, text="50na50", width=10, height=2)
 kolo_pol_na_pol.grid(row=0, column=0)
 
-kolo_telefon = tk.Button(kola, image=telefon, borderwidth=0)
+kolo_telefon = tk.Button(kola, text="Telefon do przyjaciela",width=18, height=2)
 kolo_telefon.grid(row=0, column=1)
 
 kolo_publicznosc = tk.Button(kola, text="Publiczność", width=10, height=2)
@@ -170,6 +183,20 @@ wygrane11.grid(row=10, column=0)
 wygrane12  = tk.Label(wygrane, text="500", font=("Arial", 20), bg="lightblue")
 wygrane12.grid(row=11, column=0)
 
+wygrane = {
+    0 : wygrane12,
+    1 : wygrane11,
+    2 : wygrane10,
+    3 : wygrane9,
+    4 : wygrane8,
+    5 : wygrane7,
+    6 : wygrane6,
+    7 : wygrane5,
+    8 : wygrane4,
+    9 : wygrane3,
+    10 : wygrane2,
+    11 : wygrane1
+}
 
 pytania()
 
