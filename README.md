@@ -5,6 +5,7 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   - 50:50
   - telefon do przyjaciela
   - pomoc publiczności
+
 Program napisany w pythonie przy pomocy tkintera.
 
 # Cel gry:
