@@ -134,13 +134,16 @@ przycisk_d.grid(row=2, column=1)
 kola = tk.Canvas(root, width=800, height=600, bg="blue")
 kola.grid(row=0, column=3, columnspan=2)
 
-kolo_pol_na_pol = tk.Button(kola, image=polnapol_img, width=10, height=2)
+kolo_pol_na_pol_img = ImageTk.PhotoImage(Image.open("grafika/polnapol.png"))
+kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img)
 kolo_pol_na_pol.grid(row=0, column=0)
 
-kolo_telefon = tk.Button(kola, text="Telefon do przyjaciela",width=18, height=2)
+kolo_telefon_img = ImageTk.PhotoImage(Image.open("grafika/telefon.png"))
+kolo_telefon = tk.Button(kola, image=kolo_telefon_img)
 kolo_telefon.grid(row=0, column=1)
 
-kolo_publicznosc = tk.Button(kola, text="Publiczność", width=10, height=2)
+kolo_publicnosc_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc.png"))
+kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img)
 kolo_publicznosc.grid(row=0, column=2)
 
 # Wygrane
