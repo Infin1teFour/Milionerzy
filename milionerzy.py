@@ -50,12 +50,6 @@ def pytania():
         przycisk_b.config(text=B)
         przycisk_c.config(text=C)
         przycisk_d.config(text=D)
-        print(poprawna)
-        print(A)
-        print(B)
-        print(C)
-        print(D)
-        print("\n")
         wygrane[nr_pytania].config(fg="yellow")
         if nr_pytania > 0:
             wygrane[nr_pytania-1].config(fg="black")
