@@ -57,3 +57,13 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
 
   Testowanie programu: <br>
   Jakub Dratwa 
+
+# Testy:
+  - zostanie kliknięty przycisk z poprawną odpowiedzią - program przechodzi dalej, zmienia się liczba wygranej kwoty, zmieniają się odpowiedzi i pytanie
+  - zostanie klikięta zła odpowiedź - wyświetla się okno z napisem przegrałeś z przyciskiem ok. jak kliknie się przycisk ok program zamyka się
+  - zostanie kliknięty przycisk 50/50 - 2 z czterech odpowiedzi stają się niedostępne, zostaje tylko i poprawna i jedna błędna. przycisk można kliknąć tylko raz.
+  - zostanie kliknięty przycisk telefon do pryjaciela - wyświetla się okno z napisem pryjaciel mówi że poprawną odpowiedzą jest...  . okno pokazuje poprawną odpowiedź. przycisk można kliknąć tylko raz. 
+  - zostanie kliknięty przycisk pytanie do publiczności - wyświetla się okno z wykresem kołowym na którym są przedstawione wszystkie 4 odpowiedzi. poprawna odpowiedź ma najwięcej procent. przycisk można kliknąć tylko raz. 
+  - program może zostać zminimalizowany. program nie może zostać powiększony ponieważ ma ustawione dane wymiary.
+  - po 60 sekundach wyświetla się okno z napisem przegrałeś 
+  - przycisk credits - wyświetla się okno z rospiską kto co zrobił.
