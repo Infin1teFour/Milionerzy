@@ -262,8 +262,24 @@ Dokumentacja programu (komentarze): \n Bastian Wiciński \n\n
 Testowanie programu: \n Jakub Dratwa 
 """
 credits = tk.Button(root, text="Credits", font=("Arial", 20), bg="blue", fg="white", command=lambda: messagebox.showinfo("Credits", tekst_credits))
-credits.grid(row=2, column=3, columnspan=2)
+credits.grid(row=3, column=3, columnspan=2)
 
+
+# Zasady Gry
+tekst_zasady = """
+Zasady gry są proste. \n
+Masz 12 pytań, na które musisz odpowiedzieć. \n
+Na każde pytanie masz 30 sekund. \n
+Błędna odpowiedź kończy grę. \n
+Możesz skorzystać z 3 kół ratunkowych: \n
+- pół na pół: Usuwa połowe błędnych odpowiedzi \n
+- telefon do przyjaciela: Przyjaciel mówi ci poprawną odpowiedź \n
+- publiczność: Otrzymujesz wykres pokazujący odpowiedzi od publiczności \n
+Powodzenia!
+"""
+
+zasady = tk.Button(root, text="Zasady", font=("Arial", 20), bg="blue", fg="white", command=lambda: messagebox.showinfo("Zasady", tekst_zasady))
+zasady.grid(row=2, column=3, columnspan=2)
 
 # Start programu
 pytania()
