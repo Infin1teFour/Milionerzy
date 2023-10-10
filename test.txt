@@ -13,3 +13,5 @@ co gdy:
 6 program może zostać zminimalizowany. program nie może zostać powiększony ponieważ ma ustawione dane wymiary.
 
 7 po 60 sekundach wyświetla się okno z napisem przegrałeś 
+
+8 przycisk credits - wyświetla się okno z rospiską kto co zrobił
