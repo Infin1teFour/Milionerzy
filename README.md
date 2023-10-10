@@ -1,3 +1,9 @@
+# Wymagania
+Program do działania wymaga python 3.x oraz następujących bibliotek:
+Pillow,
+mysql.connector,
+matplotlib
+
 # Opis wyglądu
 Na środku ekranu będzie wyświetlone pytanie i pod nim 4 odpowiedzi, tylko jedno jest poprawne.
 Po prawej stronie ekranu będzie suma możliwych pieniędzy do wygrania za dane pytanie.
