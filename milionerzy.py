@@ -120,7 +120,7 @@ def publicznosc():
     plt.show()
 
     kolo_publicznosc.config(state="disabled")
-    kolo_publicznosc.config(image=kolo_publicznosc_klik_img)
+    kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
