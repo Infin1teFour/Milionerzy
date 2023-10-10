@@ -52,12 +52,6 @@ def pytania():
         przycisk_b.config(text=B)
         przycisk_c.config(text=C)
         przycisk_d.config(text=D)
-        print(poprawna)
-        print(A)
-        print(B)
-        print(C)
-        print(D)
-        print("\n")
         wygrane[nr_pytania].config(fg="yellow")
         if nr_pytania > 0:
             wygrane[nr_pytania-1].config(fg="black")
@@ -69,7 +63,7 @@ def pytania():
 
 #  Utworzenie funkcji sprawdzania poprawności odpowiedzi użytkownika
 def spr(odp):
-    global poprawna
+    global poprawna, time
     if poprawna == odp:
         print("Dobrze")
         pytania()
@@ -77,6 +71,7 @@ def spr(odp):
         przycisk_b.config(state="normal")
         przycisk_c.config(state="normal")
         przycisk_d.config(state="normal")
+        time = 0
     else:
         print("Źle")
         messagebox.showerror("Koniec gry", "Przegrałeś")
@@ -212,6 +207,20 @@ wygrane11.grid(row=10, column=0)
 wygrane12  = tk.Label(wygrane, text="500", font=("Arial", 20), bg="lightblue")
 wygrane12.grid(row=11, column=0)
 
+Czas = tk.Label(root, text="Czas: 0s", font=("Arial", 20), bg="blue", fg="white")
+Czas.grid(row=2, column=0, columnspan=2)
+
+tekst_credits = """
+Głowny programista: \nJan Jakowicki \n\n
+Baza Danych: \n Anastasiia Bondarenko \n\n
+Grafiki: \n Jakub Dratwa, Bastian Wiciński \n\n
+Dokumentacja README: \n Gerard Gondek \n\n
+Dokumentacja programu (komentarze): \n Bastian Wiciński \n\n
+Testowanie programu: \n Jakub Dratwa 
+"""
+credits = tk.Button(root, text="Credits", font=("Arial", 20), bg="blue", fg="white", command=lambda: messagebox.showinfo("Credits", tekst_credits))
+credits.grid(row=2, column=3, columnspan=2)
+
 wygrane = {
     0 : wygrane12,
     1 : wygrane11,
@@ -229,4 +238,5 @@ wygrane = {
 
 pytania()
 
-tk.mainloop()
+root.after(1000, update)
+root.mainloop()
