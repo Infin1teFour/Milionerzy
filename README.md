@@ -37,6 +37,18 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
 # Odpowiedzi na pytania:
   Gracz musi wybrać jedną odpowiedź spośród czterech możliwych. Po wyborze danej odpowiedzi nie ma możliwości zmiany odpowiedzi.
 
+# Tworzenie kodu:
+  1. Importujemy:
+  - tkinter  jako tk
+  - messagebox z biblioteki tkinter
+  - Image i ImageTk z biblioteki PIL (pillow)
+  - mysql.connector
+  - random jako r
+  - matplotlib jako plt
+  2. Łączenie z bazą danych, z pytaniami, za pomocą mysql.connector <br>
+  3. Tworzenie obiektu kursora
+
+
 # Informacje dodatkowe:
   Program napisany przy pomocy bibloioteki tkinter'a <br>
 
