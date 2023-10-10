@@ -4,6 +4,7 @@ from PIL import ImageTk, Image
 import mysql.connector
 import random as r
 import matplotlib.pyplot as plt
+import time
 
 # Connect to the database
 conn = mysql.connector.connect(
@@ -35,7 +36,7 @@ A = ""
 B = ""
 C = ""
 D = ""
-
+time = 0
 
 def pytania():
     global results, nr_pytania, poprawna, A, B, C, D
@@ -61,7 +62,7 @@ def pytania():
 
 
 def spr(odp):
-    global poprawna
+    global poprawna, time
     if poprawna == odp:
         print("Dobrze")
         pytania()
@@ -69,6 +70,7 @@ def spr(odp):
         przycisk_b.config(state="normal")
         przycisk_c.config(state="normal")
         przycisk_d.config(state="normal")
+        time = 0
     else:
         print("Źle")
         messagebox.showerror("Koniec gry", "Przegrałeś")
@@ -115,6 +117,16 @@ def publicznosc():
 
     kolo_publicznosc.config(state="disabled")
     kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
+
+def update():
+    global time
+    time += 1
+    Czas.configure(text="Czas: "+str(time)+"s")
+    root.after(1000, update)
+    if time > 60:
+        messagebox.showerror("Koniec gry", "Przegrałeś")
+        root.destroy()
+
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -199,6 +211,10 @@ wygrane11.grid(row=10, column=0)
 wygrane12  = tk.Label(wygrane, text="500", font=("Arial", 20), bg="lightblue")
 wygrane12.grid(row=11, column=0)
 
+Czas = tk.Label(root, text="Czas: 0s", font=("Arial", 20), bg="blue", fg="white")
+Czas.grid(row=2, column=0, columnspan=2)
+
+
 wygrane = {
     0 : wygrane12,
     1 : wygrane11,
@@ -216,4 +232,5 @@ wygrane = {
 
 pytania()
 
-tk.mainloop()
+root.after(1000, update)
+root.mainloop()
