@@ -3,6 +3,7 @@ from tkinter import messagebox
 from PIL import ImageTk, Image
 import mysql.connector
 import random as r
+import matplotlib.pyplot as plt
 
 # Connect to the database
 conn = mysql.connector.connect(
@@ -65,46 +66,45 @@ def pytania():
         root.destroy()
 
 
-def sprA():
-    global poprawna, A
+def spr(odp):
+    global poprawna
+    if poprawna == odp:
+        print("Dobrze")
+        pytania()
+        przycisk_a.config(state="normal")
+        przycisk_b.config(state="normal")
+        przycisk_c.config(state="normal")
+        przycisk_d.config(state="normal")
+    else:
+        print("Źle")
+        messagebox.showerror("Koniec gry", "Przegrałeś")
+        root.destroy()
+
+def pol_na_pol():
+    global poprawna, A, B, C, D
     if poprawna == A:
-        print("Dobrze")
-        pytania()
-    else:
-        print("Źle")
-        messagebox.showerror("Koniec gry", "Przegrałeś")
-        root.destroy()
+        przycisk_b.config(state="disabled")
+        przycisk_c.config(state="disabled")
+    elif poprawna == B:
+        przycisk_a.config(state="disabled")
+        przycisk_c.config(state="disabled")
+    elif poprawna == C:
+        przycisk_a.config(state="disabled")
+        przycisk_d.config(state="disabled")
+    elif poprawna == D:
+        przycisk_b.config(state="disabled")
+        przycisk_c.config(state="disabled")
+    kolo_pol_na_pol.config(state="disabled")
 
-def sprB():
-    global poprawna, B
-    if poprawna == B:
-        print("Dobrze")
-        pytania()
-    else:
-        print("Źle")
-        messagebox.showerror("Koniec gry", "Przegrałeś")
-        root.destroy()
+def telefon():
+    messagebox.showinfo("Telefon do przyjaciela", "Przyjaciej mówi ci że odpowiedzią jest: "+poprawna)
+    kolo_telefon.config(state="disabled")
 
-def sprC():
-    global poprawna, C
-    if poprawna == C:
-        print("Dobrze")
-        pytania()
-    else:
-        print("Źle")
-        messagebox.showerror("Koniec gry", "Przegrałeś")
-        root.destroy()
-
-def sprD():
-    global poprawna, D
-    if poprawna == D:
-        print("Dobrze")
-        pytania()
-    else:
-        print("Źle")
-        messagebox.showerror("Koniec gry", "Przegrałeś")
-        root.destroy()
-
+def publicznosc():
+    wykres = plt.figure(figsize=(5, 5))
+    plt.pie([25, 25, 25, 25], labels=[A, B, C, D], autopct='%1.1f%%')
+    plt.title("Publiczność")
+    plt.show()
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -118,29 +118,29 @@ pytanie_tekst.grid(row=0, column=0, columnspan=2)
 przyciski = tk.Canvas(root, width=800, height=600, bg="blue")
 przyciski.grid(row=1, column=0, columnspan=3)
 
-przycisk_a = tk.Button(przyciski, text="",width=40, height=5, bg="lightblue", command=sprA)
+przycisk_a = tk.Button(przyciski, text="",width=40, height=5, bg="lightblue", command=lambda: spr(A))
 przycisk_a.grid(row=1, column=0)
 
-przycisk_b = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprB)
+przycisk_b = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=lambda: spr(B))
 przycisk_b.grid(row=1, column=1)
 
-przycisk_c = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprC)
+przycisk_c = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=lambda: spr(C))
 przycisk_c.grid(row=2, column=0)
 
-przycisk_d = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=sprD)
+przycisk_d = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=lambda: spr(D))
 przycisk_d.grid(row=2, column=1)
 
 # Koła ratunkowe
 kola = tk.Canvas(root, width=800, height=600, bg="blue")
 kola.grid(row=0, column=3, columnspan=2)
 
-kolo_pol_na_pol = tk.Button(kola, text="50na50", width=10, height=2)
+kolo_pol_na_pol = tk.Button(kola, text="50na50", width=10, height=2, command=pol_na_pol)
 kolo_pol_na_pol.grid(row=0, column=0)
 
-kolo_telefon = tk.Button(kola, text="Telefon do przyjaciela",width=18, height=2)
+kolo_telefon = tk.Button(kola, text="Telefon do przyjaciela",width=18, height=2, command=telefon)
 kolo_telefon.grid(row=0, column=1)
 
-kolo_publicznosc = tk.Button(kola, text="Publiczność", width=10, height=2)
+kolo_publicznosc = tk.Button(kola, text="Publiczność", width=10, height=2, command=publicznosc)
 kolo_publicznosc.grid(row=0, column=2)
 
 # Wygrane
