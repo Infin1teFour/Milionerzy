@@ -221,8 +221,21 @@ wygrane11.grid(row=10, column=0)
 wygrane12  = tk.Label(wygrane, text="500", font=("Arial", 20), bg="lightblue")
 wygrane12.grid(row=11, column=0)
 
+# Utworzenie  zmiennej odpowiadającaej za mierzenie czasu
 Czas = tk.Label(root, text="Czas: 0s", font=("Arial", 20), bg="blue", fg="white")
 Czas.grid(row=2, column=0, columnspan=2)
+
+# Utworzenie napisów końcowych 
+tekst_credits = """
+Głowny programista: \nJan Jakowicki \n\n
+Baza Danych: \n Anastasiia Bondarenko \n\n
+Grafiki: \n Jakub Dratwa, Bastian Wiciński \n\n
+Dokumentacja README: \n Gerard Gondek \n\n
+Dokumentacja programu (komentarze): \n Bastian Wiciński \n\n
+Testowanie programu: \n Jakub Dratwa 
+"""
+credits = tk.Button(root, text="Credits", font=("Arial", 20), bg="blue", fg="white", command=lambda: messagebox.showinfo("Credits", tekst_credits))
+credits.grid(row=2, column=3, columnspan=2)
 
 wygrane = {
     0 : wygrane12,
