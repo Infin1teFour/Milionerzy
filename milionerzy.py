@@ -37,6 +37,7 @@ A = ""
 B = ""
 C = ""
 D = ""
+time = 0
 
 #Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
@@ -120,6 +121,19 @@ def publicznosc():
 
     kolo_publicznosc.config(state="disabled")
     kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
+
+# Utworzenie funkcji odliczającej czas
+def update():
+    global time
+    time += 1
+    Czas.configure(text="Czas: "+str(time)+"s")
+    root.after(1000, update)
+    if time > 60:
+        messagebox.showerror("Koniec gry", "Przegrałeś")
+    if time > 30:
+        time = 0
+        messagebox.showerror("Koniec gry", "Czas się skończył. Przegrałeś")
+        root.destroy()
 
 # Tworzenie zmiennych wyświetlających pytania  
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -238,7 +252,20 @@ wygrane = {
     11 : wygrane1
 }
 
-pytania()
+#Credits
+tekst_credits = """
+Głowny programista: \nJan Jakowicki \n\n
+Baza Danych: \n Anastasiia Bondarenko \n\n
+Grafiki: \n Jakub Dratwa, Bastian Wiciński \n\n
+Dokumentacja README: \n Gerard Gondek \n\n
+Dokumentacja programu (komentarze): \n Bastian Wiciński \n\n
+Testowanie programu: \n Jakub Dratwa 
+"""
+credits = tk.Button(root, text="Credits", font=("Arial", 20), bg="blue", fg="white", command=lambda: messagebox.showinfo("Credits", tekst_credits))
+credits.grid(row=2, column=3, columnspan=2)
 
+
+# Start programu
+pytania()
 root.after(1000, update)
 root.mainloop()
