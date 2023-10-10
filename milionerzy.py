@@ -1,11 +1,12 @@
-import tkinter as tk
-from tkinter import messagebox
-from PIL import ImageTk, Image
-import mysql.connector
-import random as r
-import matplotlib.pyplot as plt
+# Importowanie:
+import tkinter as tk  # biblioteka tkinter  jako tk
+from tkinter import messagebox  # messagebox z biblioteki tkinter
+from PIL import ImageTk, Image  #  Image i ImageTk z biblioteki PIL (pillow)
+import mysql.connector  # łącznik mysql
+import random as r  # biblioteka random jako r
+import matplotlib.pyplot as plt  # biblioteka matplotlib jako plt
 
-# Connect to the database
+# Połączenie z bazą danych milionerzy
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -13,22 +14,23 @@ conn = mysql.connector.connect(
     database="milionerzy"
 )
 
-# Create a cursor object
+# Tworzenie obiektu kursora
 cursor = conn.cursor()
 
-# Execute a SELECT statement
+# Wykonywanie instrukcji SELECT 
 cursor.execute('SELECT * FROM pytania')
 
-# Fetch the results
+# Wylosowanie 12 pytań
 results = cursor.fetchall()
 results = r.sample(results, 12)
 
-
+# Utworzenie okna tkinter
 root = tk.Tk()
 root.title("Milionerzy")
 root.resizable(0, 0)
 root.configure(background="blue")
 
+# Zdefiniowwanie zmiennych 
 nr_pytania = 0
 poprawna = ""
 A = ""
@@ -36,7 +38,7 @@ B = ""
 C = ""
 D = ""
 
-
+#Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
     global results, nr_pytania, poprawna, A, B, C, D
     if nr_pytania <= 11:   
@@ -65,7 +67,7 @@ def pytania():
         messagebox.showinfo("Koniec gry", "Wygrałeś 1 000 000")
         root.destroy()
 
-
+#  Utworzenie funkcji sprawdzania poprawności odpowiedzi użytkownika
 def spr(odp):
     global poprawna
     if poprawna == odp:
@@ -80,6 +82,7 @@ def spr(odp):
         messagebox.showerror("Koniec gry", "Przegrałeś")
         root.destroy()
 
+#  Utworzenie funkcji koła ratunkowego pół na pól
 def pol_na_pol():
     global poprawna, A, B, C, D
     if poprawna == A:
@@ -98,13 +101,14 @@ def pol_na_pol():
     kolo_pol_na_pol.config(state="disabled")
     kolo_pol_na_pol.config(image=kolo_pol_na_pol_klik_img)
 
-
+#  Utworzenie funkcji koła ratunkowego telefon do przyjaciela
 def telefon():
     messagebox.showinfo("Telefon do przyjaciela", "Przyjaciej mówi ci że odpowiedzią jest: "+poprawna)
 
     kolo_telefon.config(state="disabled")
     kolo_telefon.config(image=kolo_telefon_klik_img)
 
+#  Utworzenie funkcji koła ratunkowego publiczność
 def publicznosc():
     wykres = plt.figure(figsize=(5, 5))
     if poprawna == A:
@@ -122,7 +126,7 @@ def publicznosc():
     kolo_publicznosc.config(state="disabled")
     kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
 
-#Pytanie
+# Tworzenie zmiennych wyświetlających pytania  
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
 pytanie.grid(row=0, column=0, columnspan=2)
 
@@ -130,7 +134,7 @@ pytanie_tekst = tk.Label(pytanie, text="", font=("Arial", 20), bg="lightblue")
 pytanie_tekst.grid(row=0, column=0, columnspan=2)
 
 
-# Odpowiedzi
+# Tworzenie przycisków odpowiedzi 
 przyciski = tk.Canvas(root, width=800, height=600, bg="blue")
 przyciski.grid(row=1, column=0, columnspan=3)
 
@@ -146,26 +150,29 @@ przycisk_c.grid(row=2, column=0)
 przycisk_d = tk.Button(przyciski, text="", width=40, height=5, bg="lightblue", command=lambda: spr(D))
 przycisk_d.grid(row=2, column=1)
 
-# Koła ratunkowe
+# Tworzenie przycisków kół ratunkowych: 
 kola = tk.Canvas(root, width=800, height=600, bg="blue")
 kola.grid(row=0, column=3, columnspan=2)
 
+# Koło ratunkowe pół na pół
 kolo_pol_na_pol_img = ImageTk.PhotoImage(Image.open("grafika/polnapol.png"))
 kolo_pol_na_pol_klik_img = ImageTk.PhotoImage(Image.open("grafika/polnapol_klik.png"))
 kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img, command=pol_na_pol, borderwidth=0)
 kolo_pol_na_pol.grid(row=0, column=0)
 
+# Koło ratunkowe telefon do przyjaciela
 kolo_telefon_img = ImageTk.PhotoImage(Image.open("grafika/telefon.png"))
 kolo_telefon_klik_img = ImageTk.PhotoImage(Image.open("grafika/telefon_klik.png"))
 kolo_telefon = tk.Button(kola, image=kolo_telefon_img, command=telefon, borderwidth=0)
 kolo_telefon.grid(row=0, column=1)
 
+# Koło ratunkowe publiczność
 kolo_publicnosc_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc.png"))
 kolo_publicnosc_klik_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc_klik.png"))
 kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img, command=publicznosc, borderwidth=0)
 kolo_publicznosc.grid(row=0, column=2)
 
-# Wygrane
+# Utworzenie pól wygranych
 wygrane = tk.Canvas(root, width=800, height=600, bg="blue", highlightthickness=0)
 wygrane.grid(row=1, column=3, columnspan=2)
 
