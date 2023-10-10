@@ -1,4 +1,4 @@
-#Wymagania
+# Wymagania
 Program do działania wymaga python 3.x oraz następujących bibliotek:
 Pillow,
 mysql.connector,
