@@ -15,3 +15,5 @@ co gdy:
 7 po 60 sekundach wyświetla się okno z napisem przegrałeś.
 
 8 przycisk credits - wyświetla się okno z rospiską kto co zrobił
+
+9 przycisk zasady - wyświetla się okno z zasadami gry
