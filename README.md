@@ -1,8 +1,8 @@
 # Wymagania
-Program do działania wymaga python 3.x oraz następujących bibliotek:
-Pillow,
-mysql.connector,
-matplotlib
+Program do działania wymaga python 3.x oraz następujących bibliotek: <br>
+Pillow, <br>
+mysql.connector, <br>
+matplotlib <br>
 
 # Opis wyglądu
 Na środku ekranu będzie wyświetlone pytanie i pod nim 4 odpowiedzi, tylko jedno jest poprawne.
