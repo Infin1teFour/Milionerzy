@@ -123,9 +123,11 @@ def update():
     time += 1
     Czas.configure(text="Czas: "+str(time)+"s")
     root.after(1000, update)
-    if time > 60:
-        messagebox.showerror("Koniec gry", "Przegrałeś")
+    if time > 30:
+        time = 0
+        messagebox.showerror("Koniec gry", "Czas się skończył. Przegrałeś")
         root.destroy()
+        
 
 
 #Pytanie
