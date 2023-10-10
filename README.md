@@ -39,8 +39,21 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
 
 # Informacje dodatkowe:
   Program napisany przy pomocy bibloioteki tkinter'a <br>
-  Główny programista: Jan Jakowicki <br>
-  Baza danych: Anastasiia Bondarenko <br>
-  Grafika: Jakub Dratwa <br>
-  Pomoc techniczna: Bastian Wiciński <br>
-  Dokumentacja: Gerard Gondek
+
+  Głowny programista: <br>
+  Jan Jakowicki <br>
+
+  Baza Danych: <br>
+  Anastasiia Bondarenko <br>
+
+  Grafiki: <br>
+  Jakub Dratwa, Bastian Wiciński <br>
+
+  Dokumentacja README: <br>
+  Gerard Gondek <br>
+
+  Dokumentacja programu (komentarze): <br>
+  Bastian Wiciński <br>
+
+  Testowanie programu: <br>
+  Jakub Dratwa 
