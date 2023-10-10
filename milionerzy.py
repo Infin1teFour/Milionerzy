@@ -120,7 +120,7 @@ def publicznosc():
     plt.show()
 
     kolo_publicznosc.config(state="disabled")
-    kolo_publicznosc.config(image=kolo_publicznosc_klik_img)
+    kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -152,17 +152,17 @@ kola.grid(row=0, column=3, columnspan=2)
 
 kolo_pol_na_pol_img = ImageTk.PhotoImage(Image.open("grafika/polnapol.png"))
 kolo_pol_na_pol_klik_img = ImageTk.PhotoImage(Image.open("grafika/polnapol_klik.png"))
-kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img, command=pol_na_pol)
+kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img, command=pol_na_pol, borderwidth=0)
 kolo_pol_na_pol.grid(row=0, column=0)
 
 kolo_telefon_img = ImageTk.PhotoImage(Image.open("grafika/telefon.png"))
 kolo_telefon_klik_img = ImageTk.PhotoImage(Image.open("grafika/telefon_klik.png"))
-kolo_telefon = tk.Button(kola, image=kolo_telefon_img, command=telefon)
+kolo_telefon = tk.Button(kola, image=kolo_telefon_img, command=telefon, borderwidth=0)
 kolo_telefon.grid(row=0, column=1)
 
 kolo_publicnosc_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc.png"))
 kolo_publicnosc_klik_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc_klik.png"))
-kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img, command=publicznosc)
+kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img, command=publicznosc, borderwidth=0)
 kolo_publicznosc.grid(row=0, column=2)
 
 # Wygrane
