@@ -10,4 +10,6 @@ co gdy:
 
 5 zostanie kliknięty przycisk pytanie do publiczności - wyświetla się okno z wykresem kołowym na którym są przedstawione wszystkie 4 odpowiedzi. poprawna odpowiedź ma najwięcej procent. przycisk można kliknąć tylko raz. 
 
-6 program może zostać zminimalizowany. program nie może zostać powiększony ponieważ ma ustawione dane wymiary. 
+6 program może zostać zminimalizowany. program nie może zostać powiększony ponieważ ma ustawione dane wymiary.
+
+7 po 60 sekundach wyświetla się okno z napisem przegrałeś 
