@@ -94,17 +94,33 @@ def pol_na_pol():
     elif poprawna == D:
         przycisk_b.config(state="disabled")
         przycisk_c.config(state="disabled")
+
     kolo_pol_na_pol.config(state="disabled")
+    kolo_pol_na_pol.config(image=kolo_pol_na_pol_klik_img)
+
 
 def telefon():
     messagebox.showinfo("Telefon do przyjaciela", "Przyjaciej mówi ci że odpowiedzią jest: "+poprawna)
+
     kolo_telefon.config(state="disabled")
+    kolo_telefon.config(image=kolo_telefon_klik_img)
 
 def publicznosc():
     wykres = plt.figure(figsize=(5, 5))
-    plt.pie([25, 25, 25, 25], labels=[A, B, C, D], autopct='%1.1f%%')
+    if poprawna == A:
+        plt.pie([40, 15, 20, 10], labels=[A, B, C, D], autopct='%1.1f%%')
+    elif poprawna == B:
+        plt.pie([10, 40, 15, 20], labels=[A, B, C, D], autopct='%1.1f%%')
+    elif poprawna == C:
+        plt.pie([20, 10, 40, 15], labels=[A, B, C, D], autopct='%1.1f%%')
+    elif poprawna == D:
+        plt.pie([15, 20, 10, 40], labels=[A, B, C, D], autopct='%1.1f%%')
+    
     plt.title("Publiczność")
     plt.show()
+
+    kolo_publicznosc.config(state="disabled")
+    kolo_publicznosc.config(image=kolo_publicznosc_klik_img)
 
 #Pytanie
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -135,15 +151,18 @@ kola = tk.Canvas(root, width=800, height=600, bg="blue")
 kola.grid(row=0, column=3, columnspan=2)
 
 kolo_pol_na_pol_img = ImageTk.PhotoImage(Image.open("grafika/polnapol.png"))
-kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img)
+kolo_pol_na_pol_klik_img = ImageTk.PhotoImage(Image.open("grafika/polnapol_klik.png"))
+kolo_pol_na_pol = tk.Button(kola, image=kolo_pol_na_pol_img, command=pol_na_pol)
 kolo_pol_na_pol.grid(row=0, column=0)
 
 kolo_telefon_img = ImageTk.PhotoImage(Image.open("grafika/telefon.png"))
-kolo_telefon = tk.Button(kola, image=kolo_telefon_img)
+kolo_telefon_klik_img = ImageTk.PhotoImage(Image.open("grafika/telefon_klik.png"))
+kolo_telefon = tk.Button(kola, image=kolo_telefon_img, command=telefon)
 kolo_telefon.grid(row=0, column=1)
 
 kolo_publicnosc_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc.png"))
-kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img)
+kolo_publicnosc_klik_img = ImageTk.PhotoImage(Image.open("grafika/publicznosc_klik.png"))
+kolo_publicznosc = tk.Button(kola, image=kolo_publicnosc_img, command=publicznosc)
 kolo_publicznosc.grid(row=0, column=2)
 
 # Wygrane
