@@ -37,6 +37,7 @@ A = ""
 B = ""
 C = ""
 D = ""
+time = 0
 
 #Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
@@ -120,6 +121,19 @@ def publicznosc():
 
     kolo_publicznosc.config(state="disabled")
     kolo_publicznosc.config(image=kolo_publicnosc_klik_img)
+
+# Utworzenie funkcji odliczającej czas
+def update():
+    global time
+    time += 1
+    Czas.configure(text="Czas: "+str(time)+"s")
+    root.after(1000, update)
+    if time > 60:
+        messagebox.showerror("Koniec gry", "Przegrałeś")
+    if time > 30:
+        time = 0
+        messagebox.showerror("Koniec gry", "Czas się skończył. Przegrałeś")
+        root.destroy()
 
 # Tworzenie zmiennych wyświetlających pytania  
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
