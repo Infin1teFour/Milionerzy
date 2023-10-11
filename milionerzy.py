@@ -32,6 +32,7 @@ C = ""
 D = ""
 time = 0
 
+# Utworzenie funkcji restartu programu
 def reset():
     global nr_pytania, poprawna, A, B, C, D, time, results
     if nr_pytania > 0:
