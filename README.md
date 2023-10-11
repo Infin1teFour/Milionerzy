@@ -45,8 +45,27 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   - mysql.connector
   - random jako r
   - matplotlib jako plt
-  2. Łączenie z bazą danych, z pytaniami, za pomocą mysql.connector <br>
-  3. Tworzenie obiektu kursora
+  2. Łączymy z bazą danych (z pytaniami) za pomocą mysql.connector <br>
+  3. Tworzymy obiektu cursor
+  4. Wykonujemy instrukcje SELECT do obiektu cursor
+  5. Losowujemy 12 pytań
+  6. Tworzymy okno tkinter
+  7. Definiujemy zmienne
+  8. Tworzymy funkcje generującą pytania z bazy danych
+  9. Tworzymy funkcje sprawdzającą poprawności odpowiedzi użytkownika
+  10. Tworzymy 3 funkcje kół ratunkowych:
+   - pół na pół
+   - telefon do przyjaciela
+   - pomoc publiczności
+  11. Tworzymy funkcje odliczającą czas
+  12. Tworzymy zmienne wyświetlające pytania
+  13. Tworzymy przyciski odpowiedzi
+  14. Tworzymy przyciski kół ratunkowych
+  15. Tworzymy pola wygranych sum pieniężnych
+  16. Tworzymy zmienną odpowiadającą za mierzenie czasu
+  17. Tworzymy kredyty (opcjonalne)
+  18. Tworzymy zasady gry
+  19. Tworzymy kod do startu gry
 
 
 # Informacje dodatkowe:
