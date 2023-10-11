@@ -225,6 +225,7 @@ wygrane12.grid(row=11, column=0)
 Czas = tk.Label(root, text="Czas: 0s", font=("Arial", 20), bg="blue", fg="white")
 Czas.grid(row=2, column=0, columnspan=2)
 
+# Rozmieszczenie pól wygranych
 wygrane = {
     0 : wygrane12,
     1 : wygrane11,
@@ -240,7 +241,7 @@ wygrane = {
     11 : wygrane1
 }
 
-#Credits
+# Napisy końcowe 
 tekst_credits = """
 Głowny programista: \nJan Jakowicki \n\n
 Baza Danych: \n Anastasiia Bondarenko \n\n
