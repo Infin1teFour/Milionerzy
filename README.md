@@ -63,9 +63,10 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   14. Tworzymy przyciski kół ratunkowych
   15. Tworzymy pola wygranych sum pieniężnych
   16. Tworzymy zmienną odpowiadającą za mierzenie czasu
-  17. Tworzymy kredyty (opcjonalne)
-  18. Tworzymy zasady gry
-  19. Tworzymy kod do startu gry
+  17. Rozmieszczamy pola wygranych w odpowiednie miejcsa
+  18. Tworzymy kredyty (opcjonalne)
+  19. Tworzymy zasady gry
+  20. Tworzymy kod do startu gry
 
 
 # Informacje dodatkowe:
