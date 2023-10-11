@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Struktura tabeli dla tabeli `pytania`
 --
 
+CREATE DATABASE `milionerzy`;
+USE milionerzy;
+
 CREATE TABLE `pytania` (
   `nr_pytania` int(11) NOT NULL,
   `pytanie` text COLLATE utf8_polish_ci NOT NULL,
