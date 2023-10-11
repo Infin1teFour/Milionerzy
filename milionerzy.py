@@ -17,13 +17,6 @@ conn = mysql.connector.connect(
 # Tworzenie obiektu kursora
 cursor = conn.cursor()
 
-# Wykonywanie instrukcji SELECT 
-cursor.execute('SELECT * FROM pytania')
-
-# Wylosowanie 12 pytań
-results = cursor.fetchall()
-results = r.sample(results, 12)
-
 # Utworzenie okna tkinter
 root = tk.Tk()
 root.title("Milionerzy")
@@ -38,6 +31,23 @@ B = ""
 C = ""
 D = ""
 time = 0
+
+# Utworzenie funkcji restartu programu
+def reset():
+    global nr_pytania, poprawna, A, B, C, D, time, results
+    if nr_pytania > 0:
+        wygrane[nr_pytania-1].config(fg="black")
+    nr_pytania = 0
+    poprawna = ""
+    A = ""
+    B = ""
+    C = ""
+    D = ""
+    time = 0
+    cursor.execute('SELECT * FROM pytania')
+    results = cursor.fetchall()
+    results = r.sample(results, 12)
+    pytania()
 
 #Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
@@ -60,7 +70,7 @@ def pytania():
         nr_pytania += 1
     else:
         messagebox.showinfo("Koniec gry", "Wygrałeś 1 000 000")
-        root.destroy()
+        reset()
 
 #  Utworzenie funkcji sprawdzania poprawności odpowiedzi użytkownika
 def spr(odp):
@@ -76,7 +86,7 @@ def spr(odp):
     else:
         print("Źle")
         messagebox.showerror("Koniec gry", "Przegrałeś")
-        root.destroy()
+        reset()
 
 #  Utworzenie funkcji koła ratunkowego pół na pól
 def pol_na_pol():
@@ -133,7 +143,7 @@ def update():
     if time > 30:
         time = 0
         messagebox.showerror("Koniec gry", "Czas się skończył. Przegrałeś")
-        root.destroy()
+        reset()
 
 # Tworzenie zmiennych wyświetlających pytania  
 pytanie = tk.Canvas(root, width=800, height=600, bg="blue")
@@ -271,6 +281,6 @@ zasady = tk.Button(root, text="Zasady", font=("Arial", 20), bg="blue", fg="white
 zasady.grid(row=2, column=3, columnspan=2)
 
 # Start programu
-pytania()
+reset()
 root.after(1000, update)
 root.mainloop()
