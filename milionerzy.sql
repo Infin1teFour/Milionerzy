@@ -78,7 +78,7 @@ INSERT INTO `pytania` (`nr_pytania`, `pytanie`, `odp_a`, `odp_b`, `odp_c`, `odp_
 (31, 'Który z poniższych pierwiastków chemicznych jest metalem ziem alkalicznych?', 'Sód', 'Potas', 'Wapń', 'Cez', 'Potas'),
 (32, 'Który z instrumentów muzycznych jest związany z klasycznym stylem jazzu?\r\n', 'Trąbka', 'Puzon', 'Klarinet', 'Saksofon', 'Saksofon'),
 (33, 'Które z państw Europy graniczy z Mołdawią?', 'Ukraina', 'Rumunia', 'Węgry', 'Bułgaria', 'Rumunia'),
-(34, '', '', '', '', '', ''),
+(34, 'Które z poniższych państw graniczy z Kenią?', 'Somalia', 'Sudan', ' Rwanda', 'Angola', 'Somalia'),
 (35, 'Który z pierwiastków chemicznych był używany do barwienia w starożytności?', 'Miedź', 'Srebro', 'Cyna', 'Ołów', 'Miedź'),
 (36, 'Które z państw leży na Półwyspie Arabskim?', 'Jordania', 'Liban', 'Egipt', 'Irak', 'Irak'),
 (37, 'Które z poniższych państw nie jest członkiem Unii Europejskiej?', 'Szwecja', 'Słowenia', 'Norwegia', 'Chorwacja', 'Norwegia'),
