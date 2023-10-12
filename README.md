@@ -10,7 +10,9 @@ Po prawej stronie ekranu będzie suma możliwych pieniędzy do wygrania za dane 
 Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   - 50:50
   - telefon do przyjaciela
-  - pomoc publiczności
+  - pomoc publiczności<br>
+  
+W lewym dolnym rogu zanajduje się przycisk pokazujący wszystkich twórców oraz przycisk pokazujący zasady gry.
 
 # Cel gry:
   Celem gry jest zdobycie jak największej wygranej, która może wynosić milion lub inny ustalony wcześniej próg wygranej.
@@ -23,10 +25,13 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   Ostateczna wygrana to zazwyczaj milion złotych lub inna ustalona wcześniej suma.
 
 # Przegrana:
-  Jeśli gracz udzieli nieprawidłowej odpowiedzi, kończy się gra.
+  Jeśli gracz udzieli nieprawidłowej odpowiedzi, kończy się gra .<br>
+  Aby zagrać jeszcze raz wcisnij "OK" w oknie przegranej
+  
 
-# Warunki wygranej:
+# Wygrana:
   Aby wygrać milion, gracz musi odpowiedzieć poprawnie na wszystkie pytania.
+  Aby zagrać jeszcze raz wcisnij "OK" w oknie wygranej
 
 # Pomocnicze opcje:
   Gracz może skorzystać z trzech rodzajów pomocy:
@@ -51,22 +56,23 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   5. Losowujemy 12 pytań
   6. Tworzymy okno tkinter
   7. Definiujemy zmienne
-  8. Tworzymy funkcje generującą pytania z bazy danych
-  9. Tworzymy funkcje sprawdzającą poprawności odpowiedzi użytkownika
-  10. Tworzymy 3 funkcje kół ratunkowych:
+  8.Tworzymy funkcję restartu programu
+  9. Tworzymy funkcje generującą pytania z bazy danych
+  10. Tworzymy funkcje sprawdzającą poprawności odpowiedzi użytkownika
+  11. Tworzymy 3 funkcje kół ratunkowych:
    - pół na pół
    - telefon do przyjaciela
    - pomoc publiczności
-  11. Tworzymy funkcje odliczającą czas
-  12. Tworzymy zmienne wyświetlające pytania
-  13. Tworzymy przyciski odpowiedzi
-  14. Tworzymy przyciski kół ratunkowych
-  15. Tworzymy pola wygranych sum pieniężnych
-  16. Tworzymy zmienną odpowiadającą za mierzenie czasu
-  17. Rozmieszczamy pola wygranych w odpowiednie miejcsa
-  18. Tworzymy kredyty (opcjonalne)
-  19. Tworzymy zasady gry
-  20. Tworzymy kod do startu gry
+  12. Tworzymy funkcje odliczającą czas
+  13. Tworzymy zmienne wyświetlające pytania
+  14. Tworzymy przyciski odpowiedzi
+  15. Tworzymy przyciski kół ratunkowych
+  16. Tworzymy pola wygranych sum pieniężnych
+  17. Tworzymy zmienną odpowiadającą za mierzenie czasu
+  18. Rozmieszczamy pola wygranych w odpowiednie miejcsa
+  19. Tworzymy kredyty (opcjonalne)
+  20. Tworzymy zasady gry
+  21. Tworzymy kod do startu gry
 
 
 # Informacje dodatkowe:
@@ -82,7 +88,7 @@ Nad sumami piniężnymi za pytania będą 3 koła ratunkowe:
   Jakub Dratwa, Bastian Wiciński <br>
 
   Dokumentacja README: <br>
-  Gerard Gondek <br>
+  Gerard Gondek, Bastian Wiciński <br>
 
   Dokumentacja programu (komentarze): <br>
   Bastian Wiciński <br>
