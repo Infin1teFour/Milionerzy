@@ -48,6 +48,12 @@ def reset():
     results = cursor.fetchall()
     results = r.sample(results, 12)
     pytania()
+    kolo_pol_na_pol.config(state="active")
+    kolo_pol_na_pol.config(image=kolo_pol_na_pol_img)
+    kolo_telefon.config(state="active")
+    kolo_telefon.config(image=kolo_telefon_img)
+    kolo_publicznosc.config(state="active")
+    kolo_publicznosc.config(image=kolo_publicznosc_img)
 
 #Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
