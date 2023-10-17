@@ -59,7 +59,7 @@ W lewym dolnym rogu zanajduje się przycisk pokazujący wszystkich twórców ora
   5. Losowujemy 12 pytań
   6. Tworzymy okno tkinter
   7. Definiujemy zmienne
-  8.Tworzymy funkcję restartu programu
+  8. Tworzymy funkcję restartu programu
   9. Tworzymy funkcje generującą pytania z bazy danych
   10. Tworzymy funkcje sprawdzającą poprawności odpowiedzi użytkownika
   11. Tworzymy 3 funkcje kół ratunkowych:
@@ -106,5 +106,5 @@ W lewym dolnym rogu zanajduje się przycisk pokazujący wszystkich twórców ora
   - zostanie kliknięty przycisk telefon do pryjaciela - wyświetla się okno z napisem pryjaciel mówi że poprawną odpowiedzą jest...  . okno pokazuje poprawną odpowiedź. przycisk można kliknąć tylko raz. 
   - zostanie kliknięty przycisk pytanie do publiczności - wyświetla się okno z wykresem kołowym na którym są przedstawione wszystkie 4 odpowiedzi. poprawna odpowiedź ma najwięcej procent. przycisk można kliknąć tylko raz. 
   - program może zostać zminimalizowany. program nie może zostać powiększony ponieważ ma ustawione dane wymiary.
-  - po 60 sekundach wyświetla się okno z napisem przegrałeś 
+  - po 60 sekundach wyświetla się okno z napisem przegrałeś.
   - przycisk credits - wyświetla się okno z rospiską kto co zrobił.
