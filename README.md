@@ -42,7 +42,7 @@ W lewym dolnym rogu zanajduje się przycisk pokazujący wszystkich twórców ora
 # Odpowiedzi na pytania:
   Gracz musi wybrać jedną odpowiedź spośród czterech możliwych. Po wyborze danej odpowiedzi nie ma możliwości zmiany odpowiedzi.
 
-#Baza danych:
+# Baza danych:
   Aby zagrać musi być pobrana baza danych, w mySQL, milionerzy.sql, która będzie miała w sobie pytania wraz z odpowiedziami. (baza danych znajduje się w folderze Milionerzy)
 
 # Tworzenie kodu:
