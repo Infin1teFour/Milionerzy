@@ -54,6 +54,10 @@ def reset():
     kolo_telefon.config(image=kolo_telefon_img)
     kolo_publicznosc.config(state="active")
     kolo_publicznosc.config(image=kolo_publicnosc_img)
+    przycisk_a.config(state="normal")
+    przycisk_b.config(state="normal")
+    przycisk_c.config(state="normal")
+    przycisk_d.config(state="normal")
 
 #Utworzenie funkcji generującej pytania z bazy danych
 def pytania():
